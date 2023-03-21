@@ -1,0 +1,28 @@
+\usetheme[progressbar=frametitle]{metropolis}
+\RequirePackage{ohmycolours}
+
+\makeatletter
+  \setbeamercolor{background canvas}{bg=white}
+  %\setbeamercolor{normal text}{fg=lightbeige}
+  \setbeamercolor{frametitle}{bg=black}
+  \setbeamercolor{progress bar}{fg=black, bg=gray}
+  \setbeamercolor{section in head}{bg=white}
+  \setbeamercolor{palette primary}{fg=white, bg=black}
+
+  \setlength{\metropolis@titleseparator@linewidth}{2pt}
+  \setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+  \setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+
+  %% https://github.com/eddelbuettel/pkg-latex-metropolis/blob/master/usr/share/texmf/tex/latex/metropolis/beamerfontthememetropolis.sty
+  \setbeamerfont{title}{size=\large}
+  \setbeamerfont{author}{size=\footnotesize}
+  \setbeamerfont{frame numbering}{size=\bf\footnotesize} % page number
+  \setbeamerfont{page number in head/foot}{size=\small}
+
+  \setbeamertemplate{caption}{\insertcaption} 
+  \setbeamertemplate{frame numbering}{
+    \ifbool{metropolis@standout}{}{
+      \insertframenumber
+    }
+  }
+\makeatother
