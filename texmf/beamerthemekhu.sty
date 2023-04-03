@@ -1,9 +1,21 @@
+\RequirePackage{xcolor}
 \usetheme{ohmyslides}
 
-
-\colorlet{FrametitleBg}{KyungHeeRed}
+% Kyung Hee University
+%% https://www.khu.ac.kr/kor/sub/tab.do?MENU_SEQ=183&TAB_SEQ=217
+\definecolor{KyungHeeRed}{RGB}{164, 15, 22}
+\definecolor{KyungHeeBlue}{RGB}{13, 50, 111}
+\definecolor{KyungHeeGold}{RGB}{192, 163, 83}
+\definecolor{kyungHeeCoolGray}{RGB}{113, 113, 113}
+\definecolor{kyungHeeSilver}{RGB}{181, 181, 181}
 
 \setbeamercolor{frametitle}{bg=KyungHeeRed}
 \setbeamercolor{progress bar}{bg=kyungHeeCoolGray}
 \setbeamercolor{palette primary}{bg=KyungHeeRed}
 
+\titlegraphic{
+   \hfill
+   \includegraphics[width=1.5cm]{fig/logo/khu.png}
+}
+
+\institute{Kyung Hee University}

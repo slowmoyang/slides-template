@@ -1,17 +1,16 @@
-NAME=main
+PROJECT=main
+OUTPUT_DIR=./build/
 
-all: $(NAME).pdf
-
-$(NAME).pdf: $(NAME).tex
-	@mkdir -vp build
-	@mkdir -vp tex
-	latexmk -bibtex -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make $< -jobname=./build/$(NAME)
+$(PROJECT).pdf: $(PROJECT).tex
+	@mkdir -vp $(OUTPUT_DIR)
+	latexmk -output-directory=$(OUTPUT_DIR) -pdf $(PROJECT)
 
 .PHONY: clean
 clean:
-	latexmk -c -jobname=./build/$(NAME)
+	latexmk -c
 
 .PHONY: cleanall
 cleanall:
-	rm -vf ./build/*
+	rm -vf $(OUTPUT_DIR)/*
+	rm -vf **/*.aux
 	@rm -vrf ./_minted-.
