@@ -1,6 +1,58 @@
 \usetheme[progressbar=frametitle]{metropolis}
 
 \makeatletter
+  \setbeamertemplate{title page}{
+    \begin{minipage}[b][\paperheight]{\textwidth}
+      \vfill%
+      \vfill%
+
+      \ifx\inserttitle
+        \@empty
+      \else
+        \usebeamertemplate*{title}
+      \fi
+
+      \ifx\insertsubtitle
+        \@empty
+      \else
+        \usebeamertemplate*{subtitle}
+      \fi
+
+      \usebeamertemplate*{title separator}
+
+      \ifx\beamer@shortauthor
+        \@empty
+      \else
+        \usebeamertemplate*{author}
+      \fi
+
+      \ifx\insertinstitute
+        \@empty
+      \else
+        \usebeamertemplate*{institute}
+      \fi
+
+      \vspace*{0.5cm}
+
+      \ifx\insertdate
+        \@empty
+      \else
+        \usebeamertemplate*{date}
+      \fi
+
+      \vfill
+
+      \ifx\inserttitlegraphic
+        \@empty
+      \else
+        \inserttitlegraphic
+      \fi
+
+      \vspace*{1cm}
+    \end{minipage}
+  }
+
+
   \setbeamercolor{background canvas}{bg=white}
   %\setbeamercolor{normal text}{fg=lightbeige}
   \setbeamercolor{frametitle}{bg=black}
