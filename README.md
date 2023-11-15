@@ -1,4 +1,4 @@
-# Metropolis + UOS colorscheme
+# Status of an efficiency measurement using a tag-and-probe method in the NanoAOD
 
 
 ## References
