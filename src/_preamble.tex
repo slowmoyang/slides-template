@@ -1,3 +1,79 @@
-\documentclass{article}
-\title{My Title}
+\documentclass[aspectratio=169]{beamer}
+
+%-------------------------------------------------------------------------------
+% Theme
+%-------------------------------------------------------------------------------
+\usetheme[progressbar=frametitle]{metropolis}
+
+%-------------------------------------------------------------------------------
+% Basic packages
+%-------------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{cancel}
+\usepackage{cases}
+
+%-------------------------------------------------------------------------------
+% Font
+%-------------------------------------------------------------------------------
+\usepackage{fontspec}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usefonttheme[onlymath]{serif}
+
+\makeatletter
+  \setlength{\metropolis@progressinheadfoot@linewidth}{3pt}
+
+  \setbeamerfont{normal text}{size=\scriptsize}
+  \setbeamerfont{itemize/enumerate body}{size=\scriptsize}
+  \setbeamerfont{itemize/enumerate subbody}{size=\scriptsize}
+  \setbeamerfont{itemize/enumerate subsubbody}{size=\scriptsize}
+
+  \setbeamerfont{caption}{size=\scriptsize}
+  \setbeamerfont{block body}{size=\scriptsize}
+  \setbeamerfont{block title}{size=\scriptsize}
+  \setbeamerfont{block title alerted}{size=\scriptsize}
+  \setbeamerfont{block body alerted}{size=\scriptsize}
+  \setbeamerfont{block title example}{size=\scriptsize}
+  \setbeamerfont{block body example}{size=\scriptsize}
+  \setbeamerfont{footnote}{size=\tiny}
+
+  \setbeamerfont{bibliography item}{size=\tiny}
+  \setbeamerfont{bibliography entry author}{size=\tiny}
+  \setbeamerfont{bibliography entry title}{size=\tiny}
+  \setbeamerfont{bibliography entry location}{size=\tiny}
+  \setbeamerfont{bibliography entry note}{size=\tiny}
+
+  \setbeamertemplate{section in toc}[square]
+  \setbeamertemplate{itemize item}{\footnotesize$\blacksquare$}
+\makeatother
+
+\AtBeginEnvironment{equation}{\scriptsize}
+\AtBeginEnvironment{equation*}{\scriptsize}
+\AtBeginEnvironment{align}{\tiny}
+\AtBeginEnvironment{align*}{\tiny}
+\AtBeginEnvironment{flalign}{\tiny}
+\AtBeginEnvironment{flalign*}{\tiny}
+\AtBeginEnvironment{displaymath}{\scriptsize}
+
+\AtBeginEnvironment{table}{\scriptsize} % etoolbox
+
+%-------------------------------------------------------------------------------
+% Title page
+%-------------------------------------------------------------------------------
+
+\title{Title}
+\subtitle{Subtitle}
+\author{Seungjin Yang}
+\date{\today}
+\institute{Institute}
+
 \begin{document}
+
+\maketitle
